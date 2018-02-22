@@ -39,3 +39,6 @@ var array = arr.map(function(e) {
 }) // ES5
 ```
 Webpack is a js static module bundler. Webpack takes modules with dependencies and generates static assets representing those modules. 
+### Explain the purpose of “use strict” and also Linters, exemplified with ESLint 
+"use strict"; defines that JavaScript code should be executed in "strict mode". With this mode on, one cannot use undeclared variables. It allows to write 'secure' code. Secure mode doesn't allow bad syntax. Like ``` (4 + 5) ```. If you mistype a global variable it will throw an error. 
+Linters are a tool for examining the quiality of the code and warning for bugs or syntax error. 
