@@ -30,7 +30,7 @@ With NPM, one can source specifc libraries for specific purposes form the ecosys
 Node.js' event loop purpose is to organize the tasks given. Especially the ones that need asynchronous operations. I.E. the callback operatinos. 
 ### Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
 Babel allow to transpile modern JavaScript (ES6/ES7) into ES5. 
-So, for example. With babel i can write arrow functions and have it transpile my funciton into old javascript:  
+So, for example with babel I can write arrow functions and have it transpile my functions into old javascript:  
 ``` javascript
 var array = arr.map(e => e +1); // ES6  
 
