@@ -38,3 +38,4 @@ var array = arr.map(function(e) {
     return e + 1;
 }) // ES5
 ```
+Webpack is a js static module bundler. Webpack takes modules with dependencies and generates static assets representing those modules. 
