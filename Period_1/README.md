@@ -31,11 +31,10 @@ Node.js' event loop purpose is to organize the tasks given. Especially the ones 
 ### Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
 Babel allow to transpile modern JavaScript (ES6/ES7) into ES5. 
 So, for example. With babel i can write arrow functions and have it transpile my funciton into old javascript:  
-    `
+``` javascript
+var array = arr.map(e => e +1); // ES6  
 
-    var array = arr.map(e => e +1); // ES6  
-
-    var array = arr.map(function(e) {
-        return e + 1;
-    }) // ES5
-    
+var array = arr.map(function(e) {
+    return e + 1;
+}) // ES5
+```
