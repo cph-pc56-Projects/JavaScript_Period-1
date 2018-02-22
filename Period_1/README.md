@@ -70,3 +70,15 @@ Whenever a constructor function is used, ```this``` refers to the specific insta
 In Java, ```this``` refers to the current instance object on which the method is executed.    
 
 So, in JS ```this``` assumes more roles than in Java.
+
+### Function Closures and the JavaScript Module Pattern
+You can think of closure as a way to "remember" and continue to access a function's scope (it's variables) even once the function has finished running. 
+```javascript
+function makeAdder(x) {
+    function add(y) {
+        return y + x;
+    }
+    return add;/// <--- This returns the function definition to where it is going to be called. So, if I create a function: var x = makeAdder(10); then x now is a function of add() that need the 'y' parameter to be finalized. 
+}
+```
+Module patterns allow for creating private methods in functions. They are a good design pattern to consider when building applications. Also, the moduel pattern is goood for performance. It minifies really well, which makes downloading the code faster. 
