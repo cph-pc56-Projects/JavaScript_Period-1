@@ -62,3 +62,11 @@ function hoisted() {
 ```
     The above code works, as js reads the function definition first and then it is instantiated.
 Nevertheless, function expressions are not hoisted. ```const hoisted = function() {};```
+### ```this``` in JavaScript and how it differs from what we know from Java/.net.
+In JavaScript ```this``` always refers to the 'owner' of the function we're executing, or rather, to the object that a function is a method of.  
+In the global execution context(outside of any function) ```this``` refers to the global object whether in strict mode or not.  
+Whenever a function is called by a preceeding dot, the object before that dot is ```this```.   
+Whenever a constructor function is used, ```this``` refers to the specific instance of the object that is created and returned by the constructor function.  
+In Java, ```this``` refers to the current instance object on which the method is executed.    
+
+So, in JS ```this``` assumes more roles than in Java.
