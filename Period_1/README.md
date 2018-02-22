@@ -42,3 +42,23 @@ Webpack is a js static module bundler. Webpack takes modules with dependencies a
 ### Explain the purpose of “use strict” and also Linters, exemplified with ESLint 
 "use strict"; defines that JavaScript code should be executed in "strict mode". With this mode on, one cannot use undeclared variables. It allows to write 'secure' code. Secure mode doesn't allow bad syntax. Like ``` (4 + 5) ```. If you mistype a global variable it will throw an error. 
 Linters are a tool for examining the quiality of the code and warning for bugs or syntax error. 
+### Variable/function-Hoisting
+Hoisting is JavaScripts default behaviour of moving declarations to the top. JavaScript does not support block scoping. Variable definitions are not scoped to their nearest enclosing statement or block as in Java, but rather to their containing function. 
+```javascript
+x = 5;
+elem = document.getElementById('demo'); // Find an element
+elem.innherHTML = x;// display x in the element
+var x; //Declare x
+```
+    Here x is first inititalzed, then is assigned to the "elem" and then at the end it is declared. 
+    So, through hoisting, javascript declares the variable for us. However, this is not reccomended. As it may lead to bugs. 
+So, rule of thumb is to always declare variables at the beginning of every scope. 
+Hoising functions:
+```javascript
+hoisted();
+function hoisted() {
+    //stuff
+}
+```
+    The above code works, as js reads the function definition first and then it is instantiated.
+Nevertheless, function expressions are not hoisted. ```const hoisted = function() {};```
