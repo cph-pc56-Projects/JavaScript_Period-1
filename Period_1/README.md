@@ -20,3 +20,22 @@ Benefits of TypeScript:
  * Easier readbility
  * Easier to maintain
  * Easily used for larger projects/enterprise applications.  
+
+### Explain generally about node.js, and when it “makes sense” and npm, and how it “fits” into the node echo system.
+Node.js is a JavaScript runtime built on Chrome's V8 JS engine. Node.js uses an event driven, non blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, "npm", is the largest ecosystem of open source libraries in the world. 
+
+With NPM, one can source specifc libraries for specific purposes form the ecosystem. This in turn, allows for a reuse of tools. NPM gives you an idea that you don't have to reinvent the wheel in terms of tools. 
+
+### Explain about the Event Loop in Node.js
+Node.js' event loop purpose is to organize the tasks given. Especially the ones that need asynchronous operations. I.E. the callback operatinos. 
+### Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
+Babel allow to transpile modern JavaScript (ES6/ES7) into ES5. 
+So, for example. With babel i can write arrow functions and have it transpile my funciton into old javascript:  
+    `
+
+    var array = arr.map(e => e +1); // ES6  
+
+    var array = arr.map(function(e) {
+        return e + 1;
+    }) // ES5
+    
