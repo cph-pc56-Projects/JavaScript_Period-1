@@ -94,3 +94,23 @@ Example:
 ### JavaScripts Prototype
 Prototypes allows to simulate classes in javascript by allowing to add global functions to a certain object. EX: ```.map()``` is a prototpe function of array object. any instance of array can invoke this function. Prototype allows us to to this to our own special object we create. And add oor own global functions to our special objects.    
 All objects in JavaScript are desencded from Object. All objects inherit methods and properties from ```Object.prototype```, altough they may be overriden. For example, other constructor' prototypes override the constructor property and provide their own ```toString()``` methods. 
+### User defined Callback Functions
+Example:
+```javascript
+//Writing own .map() function;
+function myMap(callback) {
+    var newArray = [];
+    for(var i = 0; i < this.length; i++) {
+        newArray.push(callback(this[i]))
+    }
+    return newArray;
+ }
+
+//Adding functions to the array prototype
+Array.prototype.myMap = myMap;
+
+var mapp = array.myMap(function (name) {
+    return name.toUpperCase();
+})
+console.log(mapp);
+```
