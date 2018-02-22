@@ -91,3 +91,6 @@ Example:
     console.log('Hi');
 })(); // Both function expression and invokation are enclosed in parantheses.
 ```
+### JavaScripts Prototype
+Prototypes allows to simulate classes in javascript by allowing to add global functions to a certain object. EX: ```.map()``` is a prototpe function of array object. any instance of array can invoke this function. Prototype allows us to to this to our own special object we create. And add oor own global functions to our special objects.    
+All objects in JavaScript are desencded from Object. All objects inherit methods and properties from ```Object.prototype```, altough they may be overriden. For example, other constructor' prototypes override the constructor property and provide their own ```toString()``` methods. 
