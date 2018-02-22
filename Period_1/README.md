@@ -114,3 +114,12 @@ var mapp = array.myMap(function (name) {
 })
 console.log(mapp);
 ```
+### Explain the methods map, filter and reduce
+```.map()``` method iterates through every element of the array, creating a new array with values that have been notified by the callback function and return it.   
+```.filter()``` method is used to iterate through an array and filter out elements given a condition.    
+```reduce()``` method is used to iterate through an array and condense it into onve value. The accumulator is the total that reduce keeps track of after each operation. The current value is just the next element in the array you're iterating through. 
+```javascript
+var singleVal = array.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0) // <-- making the accumulator start at zero. The starting object. 
+```
