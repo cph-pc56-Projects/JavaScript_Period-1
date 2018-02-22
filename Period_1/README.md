@@ -82,3 +82,12 @@ function makeAdder(x) {
 }
 ```
 Module patterns allow for creating private methods in functions. They are a good design pattern to consider when building applications. Also, the moduel pattern is goood for performance. It minifies really well, which makes downloading the code faster. 
+
+### Immediately-Invoked Function Expressions (IIFE)
+IIFE's or self invoking functions is a pattern to make a function ivoke itself. IIFE's can be used to avoid variable hoisting from within blocks, protect against polluting the global environemnt and simultaneosly allow public access to methods while retaining privacy for variables defined within the function. 
+Example:
+```javascript
+(function() {
+    console.log('Hi');
+})(); // Both function expression and invokation are enclosed in parantheses.
+```
