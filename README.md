@@ -1,2 +1,2 @@
-# JavaScript_Period-1
-Period 1 of the JavaScript course
+# JavaScript_Periods
+Here you'll find all JavaScript period exercices for the 4th semester. 
