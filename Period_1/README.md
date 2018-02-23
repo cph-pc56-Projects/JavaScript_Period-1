@@ -124,5 +124,4 @@ var singleVal = array.reduce((accumulator, currentValue) => {
 }, 0) // <-- making the accumulator start at zero. The starting object. 
 ```
 ### Provide examples of user defined reusable modules implemented in Node.js
-[example](https://www.journaldev.com/7608/how-to-create-node-js-reusable-modules)   
-This is hardcore
+[example](https://www.journaldev.com/7608/how-to-create-node-js-reusable-modules).   This is hardcore
