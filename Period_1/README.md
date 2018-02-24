@@ -125,3 +125,48 @@ var singleVal = array.reduce((accumulator, currentValue) => {
 ```
 ### Provide examples of user defined reusable modules implemented in Node.js
 [example](https://www.journaldev.com/7608/how-to-create-node-js-reusable-modules).   This is hardcore
+
+### Provide examples and explain the es2015 features: let, arrow functions, this, rest parameters, de-structuring assignments, maps/sets etc.
+```let``` - it allows to create variables that are limited in scope to the block, statements or expressions on which it is used.   
+```javascript
+let x = 1;
+if(x === 1) {
+    let x = 2;
+    console.log(x) // x = 2
+}
+console.log(x) // x = 1;
+```
+```=>``` -  arrow functions do the same like ```function() {}```. They bring more to the table though, they bind ```this``` automatically to the function where it is being called.    
+```javascript
+const hello = () => {
+    console.log('Hello');
+}
+```
+```this``` - allows to to do many things in JS. From referencing to the object where it is being called to referening a paramenter in a class. 
+```javascript
+// creating own callable function
+function myMap(callable) {
+    var array = [];
+    for (var i = 0; i < this.length; i++) {
+        array.push(callable(this[i]))
+
+    }
+    return array;
+}
+```
+```rest parameters``` syntax allows us to represent an indefinite number of arguments as an array.
+```javascript
+function sum(...theArgs) {
+    return theArgs.reduce((prev, current) => {
+        return previous + current;
+    });
+};
+console.log(sum(1, 2, 3)); // output: 6
+```
+```destructuring assignments``` - syntax is a JS expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. 
+```javascript
+var [a, b] = [1, 2];
+console.log(a); // output: 1
+console.log(b); // output: 2
+```
+```set/map``` - ```map``` allows you to store data in a key value pair. ```set``` objects lets you store unique values of any type, whether primitive values or object references. Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set's collection.
