@@ -170,3 +170,4 @@ console.log(a); // output: 1
 console.log(b); // output: 2
 ```
 ```set/map``` - ```map``` allows you to store data in a key value pair. ```set``` objects lets you store unique values of any type, whether primitive values or object references. Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set's collection.
+### Explain and demonstrate how es2015 supports modules (import and export) similar to what is offered by NodeJS.
