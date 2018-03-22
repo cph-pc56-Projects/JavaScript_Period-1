@@ -1,6 +1,15 @@
 var express = require('express');
+var logger = require('morgan');
 var app = express();
 
+
+//using logger
+app.use(logger('dev'), function(req, res, next) {
+    console.log(new Date().toJSON());
+    console.log(req.headers);
+
+    next();
+});
 //add your content here
 app.use("/api/calculator/:operation/:n1/:n2", function (req, res, next) {
     var calculatorRequest = {

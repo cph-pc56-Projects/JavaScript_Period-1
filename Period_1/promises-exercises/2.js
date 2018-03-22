@@ -33,6 +33,8 @@ const URL = "https://swapi.co/api/people/";
     
 // }
 
+
+//done with asyng await
 async function getPlanetforFirstSpeciesInFirstMovieForPerson(id) {
     var results = {};
     try {
@@ -44,10 +46,13 @@ async function getPlanetforFirstSpeciesInFirstMovieForPerson(id) {
         results.title = f.title;
         results.species = s.name;
         results.planet = p.name;
+        
         console.log(results);
     } 
     catch (err) {
         console.log("Error: ", err);
     }
+    
 }
-getPlanetforFirstSpeciesInFirstMovieForPerson(2);
+var a = getPlanetforFirstSpeciesInFirstMovieForPerson(2);
+console.log("a", a)
