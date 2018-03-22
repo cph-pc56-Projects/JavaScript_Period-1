@@ -27,14 +27,15 @@ function LocationBlogCreator(info, author, longitude, latitude) {
 async function createUsers() {
   await User.remove({});
   await Position.remove({});
+  await LocationBlog.remove({});
 
   var userPromises = [
-    userCreate("a", "b", "annb", "test", "xxx", "comp", "comp.url"),
+    userCreate("Kurt", "Wonnegut", "annb", "test", "xxx", "comp", "comp.url"),
     userCreate("b", "d", "acacc", "test2", "yyy", "comp", "comp.url"),
     userCreate("c", "e", "asdasd", "test2", "yyy", "comp", "comp.url"),
     userCreate("d", "f", "acasdasdcc", "test2", "yyy", "comp", "comp.url"),
     userCreate("e", "gassa", "accc", "test2", "yyy", "comp", "comp.url")
-  ]
+  ];
   var users = await Promise.all(userPromises);
 
   var positionPromises = [
@@ -43,11 +44,20 @@ async function createUsers() {
     positionCreator(123, 123, users[2]._id),
     positionCreator(123, 123, users[3]._id),
     positionCreator(123, 123, users[4]._id)
-  ]
+  ];
   var positions = await Promise.all(positionPromises);
 
+  var locationPromises = [
+    LocationBlogCreator('Cool Place', users[0]._id, 26, 148),
+    LocationBlogCreator('Another Cool Place', users[0]._id, 27, 248),
+    LocationBlogCreator('Yet Another Cool Place', users[0]._id, 27, 248),
+    LocationBlogCreator('THe Coolest Place', users[3]._id, 127, 218)
+  ];
+
+  var blogs = await Promise.all(locationPromises);
   console.log(users);
   console.log(positions);
-  
+  console.log(blogs);
+
 }
 createUsers();
