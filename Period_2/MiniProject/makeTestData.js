@@ -7,7 +7,7 @@ var Position = require("./models/position");
 function userCreate(firstName, lastName, userName, password, type, company, companyUrl) {
   var job = [{ type, company, companyUrl }, { type, company, companyUrl }];
   var userDetail = { firstName, lastName, userName, password, job };
-  console.log("sldfjaslkjflska")
+  console.log("Creating Users")
   var user = new User(userDetail);
   return user.save();
 }
