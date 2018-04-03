@@ -2,7 +2,6 @@
 
 const Archetype = require('archetype-js')
 const BookType = require('./book')
-const { ObjectId } = require('mongodb')
 const express = require('express')
 
 module.exports = db => {

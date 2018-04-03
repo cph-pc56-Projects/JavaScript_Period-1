@@ -7,8 +7,10 @@ var Position = require("./models/position");
 
 const users = User.find({}, { firstName: 1, lastName: 1 }, (err, result) => {
     if (err) throw err;
+    console.log(result);
     return result;
 });
+
 
 
 module.exports = users;
