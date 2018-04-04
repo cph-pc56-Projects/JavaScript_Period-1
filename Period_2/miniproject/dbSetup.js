@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
-//let dbURI = "mongodb://miniprojectusr:test@ds213118.mlab.com:13118/miniproject";
-let dbURI = "ADD YOUR OWN DB-URI HERE";
+let dbURI = "mongodb://pcatana:calarashi@ds121299.mlab.com:21299/miniproject";
 
 function setDbUri(uri){
   dbURI = uri;
