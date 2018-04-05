@@ -12,5 +12,7 @@ var PositionSchema = Schema({
   }
 })
 
+PositionSchema.index({loc: '2dsphere'}, {'background': true})
+
 module.exports = mongoose.model("Position",PositionSchema);
 
