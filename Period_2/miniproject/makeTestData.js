@@ -60,6 +60,7 @@ async function createUsers() {
   console.log(blogs);
 }
 // createUsers();
+
 async function createLocationUsers() {
   await User.remove({});
   await Position.remove({});
