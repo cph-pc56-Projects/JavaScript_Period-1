@@ -1,6 +1,13 @@
 var mongoose = require('mongoose');
-const dbURI = "mongodb://pcatana:calarashi@ds121299.mlab.com:21299/miniproject";
-mongoose.connect(dbURI);
+let dbURI = "mongodb://pcatana:calarashi@ds121299.mlab.com:21299/miniproject";
+
+function setDbUri(uri){
+  dbURI = uri;
+}
+
+function connect(){
+  return mongoose.connect(dbURI);  
+}
 
 mongoose.connection.on('connected', function () {  
   console.log('Mongoose default connection open to ' + dbURI);
@@ -10,3 +17,8 @@ mongoose.connection.on('connected', function () {
 mongoose.connection.on('error',function (err) {  
   console.log('Mongoose default connection error: ' + err);
 }); 
+
+module.exports = {
+  setDbUri: setDbUri,
+  connect: connect
+}
