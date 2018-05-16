@@ -13,6 +13,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const api = require('./routes/api');
+const users = require('./routes/users');
+const login = require('./routes/locationapi');
 
 app.prepare()
   .then(() => {
@@ -23,6 +25,8 @@ app.prepare()
 
     
     server.use('/api', api);
+    server.use('/api', users);
+    server.use('/api', login);
 
     server.get('*', (req, res) => {
       return handle(req, res)
