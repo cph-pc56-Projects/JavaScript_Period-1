@@ -15,6 +15,8 @@ const handle = app.getRequestHandler()
 const api = require('./routes/api');
 const users = require('./routes/users');
 const login = require('./routes/locationapi');
+const graphQL = require('./routes/graphQL');
+
 
 app.prepare()
   .then(() => {
@@ -27,6 +29,7 @@ app.prepare()
     server.use('/api', api);
     server.use('/api', users);
     server.use('/api', login);
+    server.use('/api', graphQL);
 
     server.get('*', (req, res) => {
       return handle(req, res)

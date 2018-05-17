@@ -22,7 +22,7 @@ client
 
 
 
-class App extends Component {
+class Apollo extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
@@ -34,4 +34,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Apollo;

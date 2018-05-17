@@ -1,5 +1,7 @@
-import ApolloClient from "apollo-boost";
-import gql from "graphql-tag";
+// import ApolloClient from "apollo-boost";
+// import gql from "graphql-tag";
+const ApolloClient = require('apollo-boost');
+const gql = require('graphql-tag');
 
 
 const client = new ApolloClient({
