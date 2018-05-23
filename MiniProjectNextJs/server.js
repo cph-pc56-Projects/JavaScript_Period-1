@@ -6,7 +6,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -24,7 +24,7 @@ app.prepare()
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({extended: false}));
     server.use(cookieParser());
-
+    server.use(cors());
     
     server.use('/api', api);
     server.use('/api', users);
