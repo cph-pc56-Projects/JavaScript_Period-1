@@ -14,8 +14,8 @@ describe("Testing the LoginFacade", function () {
 
 
   before(async function () {
-    this.timeout(require("../dbSettings").MOCHA_TEST_TIMEOUT);
-    dbSetup.setDbUri(require("../dbSettings").TEST_DB_URI);
+    this.timeout(require("../dbSetup").MOCHA_TEST_TIMEOUT);
+    dbSetup.setDbUri(require("../dbSetup").TEST_DB_URI);
     connection = await dbSetup.connect();
 
 

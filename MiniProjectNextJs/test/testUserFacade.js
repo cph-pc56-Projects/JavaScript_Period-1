@@ -1,7 +1,6 @@
 const expect = require("chai").expect;
 const dbSetup = require("..//dbSetup");
-//var TEST_DB_URI = "mongodb://test:test@ds119969.mlab.com:19969/miniproject_test";
-var TEST_DB_URI = "ADD YOUR OWN URI TO YOUR TEST DATABASE";
+var TEST_DB_URI = "mongodb://pcatana:calarashi@ds121299.mlab.com:21299/miniproject";
 var userFacade = require("../facades/userFacade");
 var User = require("../models/user");
 

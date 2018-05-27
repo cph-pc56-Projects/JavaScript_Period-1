@@ -15,28 +15,29 @@ async function getUsers() {
       {
         getAllUsers {
             firstName
+            lastName
         }
       }
     `
         });
-        console.log(users);
+    console.log(users);
     return { users }
 }
-    // const client = new ApolloClient({
-    //     uri: "http://127.0.0.1:3000/api/graphql"
-    // });
+// const client = new ApolloClient({
+//     uri: "http://127.0.0.1:3000/api/graphql"
+// });
 
-    // client
-    //     .query({
-    //         query: gql`
-    //     {
-    //         getAllUsers {
-    //             firstName
-    //         }
-    //     }
-    //     `
-    //     })
-    //     .then(result => console.log(result.data));
+// client
+//     .query({
+//         query: gql`
+//     {
+//         getAllUsers {
+//             firstName
+//         }
+//     }
+//     `
+//     })
+//     .then(result => console.log(result.data));
 
 
 
@@ -57,7 +58,7 @@ class Apollo extends Component {
                     <h2>My First Apollo app </h2>
                     {firstNames.map((name) => {
                         return (
-                            <p>{name.firstName} </p>
+                            <p>{`${name.firstName} ${name.lastName}`} </p>
                         )
                     })}
                 </div>
