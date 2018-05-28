@@ -5,4 +5,3 @@
  - MongoDB
  - GraphQL
  - ExpressJS
- - Something...
