@@ -4,7 +4,7 @@
   "description": "promises",
   "main": "2.js",
   "dependencies": {
-    "node-fetch": "^2.0.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
   "scripts": {
